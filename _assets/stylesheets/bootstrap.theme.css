@@ -407,7 +407,7 @@
 }
 
 .grad1 {
-  min-height: 100px;
+  min-height: 600px;
   padding-top: 20px;
   border-top: 1px solid #FFF;
   background: #FEFEFE;
@@ -433,6 +433,7 @@
 }
 
 .content_one {
+  min-height: 600px;
   background-color: #FFF;
   border: 1px solid #DDD;
   border-radius: 4px;
@@ -534,6 +535,15 @@
   line-height: 20px;
 }
 
+.products_head_img {
+  width: 100%;
+  background: url(/assets/images/products.jpg) no-repeat center;
+  height: 105px;
+  border-bottom: 1px solid #E6E6E6;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
 .news_head_img {
   width: 100%;
   background: url(/assets/images/news.jpg) no-repeat center;
@@ -566,6 +576,101 @@
 
 .news_content p {
   text-indent: 28px;
+}
+
+.product {
+  padding: 15px 0 15px 0;
+}
+
+.p_cat_l {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.p_cat_r {
+  border-left: 1px solid #D6D6D6;
+  min-height: 500px;
+}
+
+.product_categories {
+  list-style: none;
+  padding: 0;
+}
+
+.product_categories li {
+  
+}
+
+.product_categories a {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+}
+
+.product_categories a.active {
+  background: url(/assets/images/grey_grad.png) repeat-y right;
+}
+
+.product_categories a img {
+  width: 64px;
+  height: 64px;
+  margin: 0 5px 0 10px;
+}
+
+.box {
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+  display: block;
+  max-width: 550px;
+  background: #f7f7f7;
+  border: 1px solid #CCC;
+  margin: 0 0 10px 0;
+  position: relative;
+  padding: 8px 10px 10px;
+}
+
+.box .box_header {
+    -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.35);
+    -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.35);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.35);
+    background: #06acf1; /* Old browsers */
+    background: -moz-linear-gradient(top,  #06acf1 0%, #0075e2 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#06acf1), color-stop(100%,#0075e2)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #06acf1 0%,#0075e2 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #06acf1 0%,#0075e2 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #06acf1 0%,#0075e2 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #06acf1 0%,#0075e2 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#06acf1', endColorstr='#0075e2',GradientType=0 ); /* IE6-9 */
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 15px;
+    padding: 5px 20px 5px 27px;
+    margin: 0 30px 0 -10px;
+    color: #FFF;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-size: 14px;
+}
+
+.box .box_content {
+  margin-top: 5px;
+  font-size: 14px;
+  line-height: 22px;
+  padding: 6px 15px;
+}
+
+.box .box_content ul {
+  padding: 0 0 0 15px;
+}
+
+.box .box_content img {
+  max-width: 100%;
 }
 
 .footer {

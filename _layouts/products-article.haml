@@ -1,0 +1,29 @@
+---
+layout: default
+belongs_to: products
+---
+%article.grad1
+  .container
+    %ol.breadcrumb
+      %li
+        %a{ href: "/" } 首页
+      %li
+        %a{ href: "/products/" } 产品中心
+      %li.active {{ page.title }}
+    .row.content_one
+      .products_head_img
+      .col-xs-4.p_cat_l
+        %ul.product_categories
+          %li
+            %a{ href: "/products/" }
+              %img{ src: "/images/64px/products.jpg" }
+              所有产品
+          {% for cat in site.product_categories %}
+          %li
+            %a{ class: "{{ page.categories | active:cat[1] }}", href: "" }
+              %img{ src: "/images/64px/{{ cat[2] }}" }
+              {{ cat[0] }}
+          {% endfor %}
+      .col-xs-8.p_cat_r
+        %h3.heading_one {{ page.title }}
+        {{ content }}

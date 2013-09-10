@@ -25,3 +25,8 @@ exclude:
   - LICENSE
   - Rakefile
   - README.md
+
+product_categories:
+  - - 醋酸丁酸纤维素(CAB)
+    - cab
+    - cellulose_acetate_butyrate.jpg
