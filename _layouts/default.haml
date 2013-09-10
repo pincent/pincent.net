@@ -33,7 +33,7 @@
               %a{ href: "/about/" } 关于品诚
             %li{ class: "{% if page.permalink == '/products/' %}active{% endif %}" }
               %a{ href: "/products/" } 产品中心
-            %li{ class: "{% if page.permalink == '/news/' %}active{% endif %}" }
+            %li{ class: "{% if page.belongs_to == 'news' %}active{% endif %}" }
               %a{ href: "/news/" } 新闻中心
             %li{ class: "{% if page.permalink == '/contact/' %}active{% endif %}" }
               %a{ href: "/contact/" } 联系我们

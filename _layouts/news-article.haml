@@ -1,0 +1,19 @@
+---
+layout: default
+belongs_to: news
+---
+%article.grad1
+  .container
+    %ol.breadcrumb
+      %li
+        %a{ href: "/" } 首页
+      %li
+        %a{ href: "/news/" } 新闻中心
+      %li.active {{ page.title }}
+    .row.content_one
+      %img.news_head_img{ src: "/assets/images/news.jpg" }
+      .col-md-8.col-md-offset-2
+        %h3.news_heading {{ page.title }}
+        %em.news_info 发表日期：{{ page.date | date:'%Y-%m-%d' }}
+        .news_content
+          {{ content }}
