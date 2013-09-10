@@ -11,7 +11,7 @@ permalink: /news/
       %li.active
         %a{ href: "/news/" } 新闻中心
     .row.content_one
-      %img.news_head_img{ src: "/assets/images/news.jpg" }
+      .news_head_img
       .col-md-8.col-md-offset-2
         %ul.news_list
           {% for post in site.categories["news"] %}
