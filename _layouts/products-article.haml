@@ -2,6 +2,8 @@
 layout: default
 belongs_to: products
 ---
+{% assign cat = page.categories[1] %}
+{% assign cate = site.product_categories[cat] %}
 %article.grad1
   .container
     %ol.breadcrumb
@@ -9,6 +11,8 @@ belongs_to: products
         %a{ href: "/" } 首页
       %li
         %a{ href: "/products/" } 产品中心
+      %li
+        %a{ href: "/products/{{ cate[1] }}/" } {{ cate[0] }}
       %li.active {{ page.title }}
     .row.content_one
       .products_head_img
