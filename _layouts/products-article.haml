@@ -18,12 +18,12 @@ belongs_to: products
             %a{ href: "/products/" }
               %img{ src: "/images/64px/products.jpg" }
               所有产品
-          {% for cat in site.product_categories %}
+          {% for cat_hash in site.product_categories %}{% for cat in cat_hash %}{% if cat[0] %}
           %li
-            %a{ class: "{{ page.categories | active:cat[1] }}", href: "" }
+            %a{ class: "{{ page.categories | active:cat[1] }}", href: "/products/{{ cat[1] }}/" }
               %img{ src: "/images/64px/{{ cat[2] }}" }
               {{ cat[0] }}
-          {% endfor %}
+          {% endif %}{% endfor %}{% endfor %}
       .col-xs-8.p_cat_r
         %h3.heading_one {{ page.title }}
         {{ content }}

@@ -27,6 +27,11 @@ exclude:
   - README.md
 
 product_categories:
-  - - 醋酸丁酸纤维素(CAB)
+  cab:
+    - 醋酸丁酸纤维素(CAB)
     - cab
+    - cellulose_acetate_butyrate.jpg
+  dispersant:
+    - 分散剂
+    - dispersant
     - cellulose_acetate_butyrate.jpg

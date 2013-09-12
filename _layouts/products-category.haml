@@ -1,0 +1,45 @@
+---
+layout: default
+belongs_to: products
+---
+{% if page.category %}
+{% assign pagecat = site.product_categories[page.category] %}
+{% assign cate = pagecat[1] %}
+{% else %}
+{% assign cate = 'products' %}
+{% endif %}
+%article.grad1
+  .container
+    %ol.breadcrumb
+      %li
+        %a{ href: "/" } 首页
+      %li{ class: "{% if pagecat %}{% else %}active{% endif %}" }
+        %a{ href: "/products/" } 产品中心
+      {% if pagecat %}
+      %li.active
+        {{ pagecat[0] }}
+      {% endif %}
+    .row.content_one
+      .products_head_img
+      .col-xs-4.p_cat_l
+        %ul.product_categories
+          %li
+            %a{ class: "{% if pagecat %}{% else %}active{% endif %}",  href: "/products/" }
+              %img{ src: "/images/64px/products.jpg" }
+              所有产品
+          {% for cat_hash in site.product_categories %}{% for cat in cat_hash %}{% if cat[0] %}
+          %li
+            %a{ class: "{% if page.category == cat[1] %}active{% endif %}", href: "/products/{{ cat[1] }}/" }
+              %img{ src: "/images/64px/{{ cat[2] }}" }
+              {{ cat[0] }}
+          {% endif %}{% endfor %}{% endfor %}
+      .col-xs-8.p_cat_r
+        {% for post in site.categories[cate] %}
+        .media.product
+          %a.pull-left{ href: "{{ post.url }}" }
+            %img.media-object{ src: "/images/64px/{% if post.image %}{{ post.image }}{% else %}products.jpg{% endif %}" }
+          .media-body
+            %h4.media-heading
+              %a{ href: "{{ post.url }}" } {{ post.title }}
+            {{ post.description }}
+        {% endfor %}
