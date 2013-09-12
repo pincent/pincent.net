@@ -11,7 +11,7 @@ belongs_to: news
         %a{ href: "/news/" } 新闻中心
       %li.active {{ page.title }}
     .row.content_one
-      %img.news_head_img{ src: "/assets/images/news.jpg" }
+      .news_head_img
       .col-md-8.col-md-offset-2
         %h3.news_heading {{ page.title }}
         %em.news_info 发表日期：{{ page.date | date:'%Y-%m-%d' }}
