@@ -656,6 +656,16 @@
   background: url(/assets/images/grey_grad.png) repeat-y right;
 }
 
+
+@media (min-width: 1200px) {
+  .product_categories a {
+    text-indent: 80px;
+  }
+  .product {
+    width: 85%;
+  }
+}
+
 .product_categories a img {
   width: 64px;
   height: 64px;
@@ -753,12 +763,12 @@
   display: block;
   text-align: center;
   line-height: 35px;
-  border-bottom: 3px solid #70AEE4;
+  border-bottom: 4px solid #70AEE4;
   text-decoration: none;
 }
 
 #home-tabs li.active a {
-  border-bottom: 3px solid #0669BF;
+  border-bottom: 4px solid #0669BF;
 }
 
 #home-tabs-content {
