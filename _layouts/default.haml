@@ -6,6 +6,7 @@
   %head
     %meta{ charset: "UTF-8" }
     %title {% if page.full_title %}{{ page.full_title }}{% else %}{% if page.title %}{{ page.title }}-{% endif %}{{ site.title }}{% endif %}
+    <meta name="keywords" content="{% if page.keywords %}{{ page.keywords }}{% else %}{{ site.keywords }}{% endif %}">
     <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
@@ -45,11 +46,14 @@
             %h3
               %a{ href: "/about/" } 予之出于上品，行之发于至诚
             &copy; 2013 佛山市品诚贸易有限公司
+            %br
+            %small
+              %a{ href: "{{ site.url }}/sitemap.xml" } Sitemap
           .col-md-4
             %h3
-              %a{ href: "/contact/" } 地址
+              %a{ href: "/contact/" } 公司地址
             佛山市顺德区大良新宁路43号四座97号商铺
           .col-md-4
             %h3
-              %a{ href: "/contact/" } 电话
+              %a{ href: "/contact/" } 联系电话
             0757-22330908

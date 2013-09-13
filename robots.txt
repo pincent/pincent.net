@@ -1,0 +1,9 @@
+---
+layout: nil
+---
+User-agent: *
+Disallow: /assets/
+Disallow: /images/
+Disallow: /favicon.ico
+
+Sitemap: {{ site.url }}/sitemap.xml
