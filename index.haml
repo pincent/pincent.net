@@ -1,6 +1,73 @@
 ---
 layout: default
 ---
-%article.grad1{ role: "main" }
-  .container
-    content
+%article{ role: "main" }
+  .homecar
+    .grad1
+    .grad2
+    .container
+      #home-carousel.carousel.slide
+        %ol.carousel-indicators
+          %li.active{ data: { target: "#home-carousel", slide: { to: 0 } } }
+          %li{ data: { target: "#home-carousel", slide: { to: 1 } } }
+        .carousel-inner
+          .item.active
+            %img{ src: "/assets/images/tubes.jpg" }
+            .carousel-caption
+          .item
+            %img{ src: "/assets/images/eco.jpg" }
+            .carousel-caption
+        %a.left.carousel-control{ href: "#home-carousel", data: { slide: "prev" } }
+          %span.icon-prev
+        %a.right.carousel-control{ href: "#home-carousel", data: { slide: "next" } }
+          %span.icon-next
+      :javascript
+        $('#home-carousel').carousel({ interval: 5000 });
+        $('#home-carousel').carousel('cycle');
+  .grad3
+    .container
+      .row
+        .col-md-10.col-md-offset-1
+          %ul#home-tabs
+            %li.active
+              %a{ href: "#tab-products" } 产品展示
+            %li
+              %a{ href: "#tab-about" } 关于品诚
+            %li
+              %a{ href: "#tab-news" } 新闻中心
+            %li
+              %a{ href: "#tab-contact" } 联系我们
+          #home-tabs-content.tab-content
+            #tab-products.tab-pane.active
+              %ul.protable
+                {% for cat_hash in site.product_categories %}{% for cat in cat_hash %}{% if cat[0] %}
+                %li
+                  %a{ href: "/products/{{ cat[1] }}/" }<>
+                    %img{ src: "/images/64px/{{ cat[2] }}" }<>
+                    %br<>
+                    {{ cat[0] }}
+                {% endif %}{% endfor %}{% endfor %}
+            #tab-about.tab-pane
+              %p 佛山市品诚贸易有限公司主要从事化工贸易，代理销售国内外化工原材料， 是国内专业的涂料、油墨及日用化学品原料供货商。
+              %p 我们致力于原料的开发引进及市场应用工作，与国际著名化工公司进行紧密合作， 并且通过企业的技术优势与客户建立长期的项目合作关系，保持企业与客户可持续的共同目标， 为客户提供优良原料，以提升产品竞争力，并注重以环保为原则，以及时服务为宗旨，与行业共同发展。
+            #tab-news.tab-pane
+              .row
+                {% for post in site.categories['news'] limit:2 %}
+                .col-md-6
+                  %a.title{ href: "{{ post.url }}" } {{ post.title }}
+                  %p {{ post.description }}
+                {% endfor %}
+            #tab-contact.tab-pane
+              .row
+                .col-md-6
+                  %p 公司地址：佛山市顺德区大良新宁路43号四座97号商铺
+                  %p 联系电话：0757-22330908
+                .col-md-6
+                  %p 电邮地址：
+                  %p QQ：
+          :javascript
+            $('#home-tabs a').hover(function(e){
+              $(this).tab('show');
+            }).click(function(e){
+              e.preventDefault();
+            });
