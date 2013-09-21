@@ -4,6 +4,26 @@ title: 羧甲基纤维素CM-30000
 description: 白色或淡黄色粉末。具有湿润性，可溶于水，在中性或微碱性时为高粘度液体。对化学药品、热、光稳定。无臭、无味。
 image: 
 ---
+#carousel.carousel.slide
+  %ol.carousel-indicators
+    %li.active{ data: { target: "#carousel", slide: { to: 0 } } }
+    %li{ data: { target: "#carousel", slide: { to: 1 } } }
+    %li{ data: { target: "#carousel", slide: { to: 2 } } }
+  .carousel-inner
+    .item.active
+      %img{ src: "/images/cellulose/cellulose-1.jpg", height: 450 }
+      .carousel-caption
+    .item
+      %img{ src: "/images/cellulose/cellulose-2.jpg", height: 450 }
+      .carousel-caption
+    .item
+      %img{ src: "/images/cellulose/cellulose-3.jpg", height: 450 }
+      .carousel-caption
+  %a.left.carousel-control{ href: "#carousel", data: { slide: "prev" } }
+    %span.icon-prev
+  %a.right.carousel-control{ href: "#carousel", data: { slide: "next" } }
+    %span.icon-next
+
 .box
   .box_header 性质
   .box_content
