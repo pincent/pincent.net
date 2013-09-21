@@ -35,7 +35,7 @@ title: 产品中心
               {{ cat[0] }}
           {% endif %}{% endfor %}{% endfor %}
       .col-xs-8.p_cat_r
-        {% for post in site.categories[cate] %}
+        {% for post in site.categories[cate] reversed %}
         .media.product
           %a.pull-left{ href: "{{ post.url }}" }
             %img.media-object{ src: "/images/64px/{% if post.image %}{{ post.image }}{% else %}products.jpg{% endif %}" }
