@@ -30,13 +30,13 @@ layout: default
         .col-md-10.col-md-offset-1
           %ul#home-tabs
             %li.active
-              %a{ href: "#tab-products" } 产品展示
+              %a{ href: "/products/", data: { target: "#tab-products" } } 产品展示
             %li
-              %a{ href: "#tab-about" } 关于品诚
+              %a{ href: "/about/", data: { target: "#tab-about" } } 关于品诚
             %li
-              %a{ href: "#tab-news" } 新闻中心
+              %a{ href: "/news/", data: { target: "#tab-news" } } 新闻中心
             %li
-              %a{ href: "#tab-contact" } 联系我们
+              %a{ href: "/contact/", data: { target: "#tab-contact" } } 联系我们
           #home-tabs-content.tab-content
             #tab-products.tab-pane.active
               %ul.protable
@@ -68,6 +68,4 @@ layout: default
           :javascript
             $('#home-tabs a').hover(function(e){
               $(this).tab('show');
-            }).click(function(e){
-              e.preventDefault();
             });
