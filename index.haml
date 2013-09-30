@@ -53,17 +53,17 @@ layout: default
             #tab-news.tab-pane
               .row
                 {% for post in site.categories['news'] limit:2 %}
-                .col-md-6
+                .col-sm-6
                   %a.title{ href: "{{ post.url }}" } {{ post.title }}
                   %p {{ post.description }}
                 {% endfor %}
             #tab-contact.tab-pane
               .row
-                .col-md-6
+                .col-sm-6
                   %p 联系人：梁先生
                   %p 公司地址：佛山市顺德区大良新宁路43号四座97号商铺
                   %p 邮政编码：528300
-                .col-md-6
+                .col-sm-6
                   %p 联系电话：86-0757-22330908
                   %p 传真：457-0757-22330908
           :javascript

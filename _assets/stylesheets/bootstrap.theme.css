@@ -406,21 +406,53 @@
   margin-top: 48px;
 }
 
-@media (max-width: 768px) {
+.brand-2 {
+  display: none;
+}
+
+@media screen and (max-width: 991px) {
+  .brand-1 {
+    display: none;
+  }
+  .brand-2 {
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
   #navbar {
+    margin-top: 78px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #navbar {
+    margin-top: 0;
     float: none !important;
+  }
+
+  .navbar .navbar-nav a {
+    border-bottom: 0;
+    padding-left: 18px;
   }
 
   .navbar .navbar-nav > .active > a {
     background: none;
     border-bottom: 0;
     border-left: 3px solid #0669BF;
+    padding-left: 15px;
   }
 
   .navbar .navbar-nav > .active > a:hover {
     background: none;
     border-bottom: 0;
     border-left: 3px solid #0669BF;
+    padding-left: 15px;
+  }
+
+  .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    border-bottom: 0;
+    border-left: 3px solid #70AEE4;
+    padding-left: 15px;
   }
 }
 
@@ -706,10 +738,6 @@
   padding: 0;
 }
 
-.product_categories li {
-  
-}
-
 .product_categories a {
   display: block;
   width: 100%;
@@ -727,6 +755,38 @@
   }
   .product {
     width: 85%;
+  }
+}
+
+@media (max-width: 480px) {
+  .product_categories {
+    margin: 0;
+  }
+  .product_categories a {
+    padding: 0 0 0 10px;
+  }
+  .product_categories a img {
+    display: block;
+    margin: 0 !important;
+  }
+  .p_cat_l {
+    float: none;
+    width: 100%;
+  }
+  .product_categories li {
+    width: 85px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 5px 5px 0;
+  }
+  .p_cat_r {
+    float: none;
+    width: 100%;
+    border-left: 0;
+    border-top: 1px solid #D6D6D6;
+  }
+  .p_cat_r .product a.pull-left {
+    display: none;
   }
 }
 
@@ -811,6 +871,12 @@
   font-weight: bold;
 }
 
+@media (max-width: 991px) {
+  .footer .text-right {
+    text-align: left;
+  }
+}
+
 #home-tabs {
   width: 100%;
   display: table;
@@ -865,6 +931,22 @@ ul.protable li {
   text-align: center;
 }
 
+@media screen and (max-width: 768px) {
+  #home-tabs-content {
+    height: auto;
+  }
+  ul.protable {
+    display: block;
+    text-align: center;
+  }
+  ul.protable li {
+    display: inline-block;
+    width: 70px;
+    vertical-align: top;
+    margin: 0 5px 5px 0;
+  }
+}
+
 #carousel {
   margin: 20px 0;
 }
@@ -879,6 +961,11 @@ width: 183px;
 display: none;
 overflow: hidden;
 height: 270px;
+}
+@media screen and (max-width: 767px) {
+  .zxkf {
+    display: none !important;
+  }
 }
 .zxkfbtn {
 cursor: pointer;
