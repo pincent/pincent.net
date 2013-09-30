@@ -2,8 +2,28 @@
 layout: products-article
 title: Tylose Hs30000YP2
 description: Tylose Hs30000YP2 羟乙基纤维素（高醚化度，高生物稳定性及延长膨胀时间类）
-image: 
+image: /images/cellulose/64px/cellulose-1.jpg
 ---
+#carousel.carousel.slide
+  %ol.carousel-indicators
+    %li.active{ data: { target: "#carousel", slide: { to: 0 } } }
+    %li{ data: { target: "#carousel", slide: { to: 1 } } }
+    %li{ data: { target: "#carousel", slide: { to: 2 } } }
+  .carousel-inner
+    .item.active
+      %img{ src: "/images/cellulose/cellulose-1.jpg", height: 450 }
+      .carousel-caption
+    .item
+      %img{ src: "/images/cellulose/cellulose-2.jpg", height: 450 }
+      .carousel-caption
+    .item
+      %img{ src: "/images/cellulose/cellulose-3.jpg", height: 450 }
+      .carousel-caption
+  %a.left.carousel-control{ href: "#carousel", data: { slide: "prev" } }
+    %span.icon-prev
+  %a.right.carousel-control{ href: "#carousel", data: { slide: "next" } }
+    %span.icon-next
+
 .box
   .box_header 产品名称
   .box_content

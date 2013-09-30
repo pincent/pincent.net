@@ -32,7 +32,9 @@ end
 desc 'Make square thumbnails of images in /images/ directory'
 task :make_thumbs do
   require 'fileutils'
-  Dir.chdir File.expand_path('../images', __FILE__);
+  chdir = File.expand_path('../images', __FILE__);
+  chdir = File.join(chdir, ARGV[1]) if ARGV[1]
+  Dir.chdir chdir
   thumb = '64px'
   FileUtils.mkdir thumb unless File.directory?(thumb)
   thumbs = Dir.glob("#{thumb}/*.jpg").map{ |t| File.basename(t) }

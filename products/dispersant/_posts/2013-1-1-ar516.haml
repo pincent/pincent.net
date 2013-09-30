@@ -2,8 +2,24 @@
 layout: products-article
 title: AR516分散剂(降粘、浮色)
 description: AR516，成分是含酰胺基有机磷酸酯。
-image: 
+image: /images/dispersant/64px/AR516-1.jpg
 ---
+#carousel.carousel.slide
+  %ol.carousel-indicators
+    %li.active{ data: { target: "#carousel", slide: { to: 0 } } }
+    %li{ data: { target: "#carousel", slide: { to: 1 } } }
+  .carousel-inner
+    .item.active
+      %img{ src: "/images/dispersant/AR516-1.jpg", height: 450 }
+      .carousel-caption
+    .item
+      %img{ src: "/images/dispersant/AR516-2.jpg", height: 450 }
+      .carousel-caption
+  %a.left.carousel-control{ href: "#carousel", data: { slide: "prev" } }
+    %span.icon-prev
+  %a.right.carousel-control{ href: "#carousel", data: { slide: "next" } }
+    %span.icon-next
+
 .box
   .box_header 产品简介
   .box_content
