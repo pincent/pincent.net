@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-gem "jekyll"          , "~> 1.1.2"
+gem "jekyll"          , "~> 1.3.0"
 
 gem "coffee-script"   , "~> 2.2.0"
 gem "therubyracer"    , "~> 0.12.0"

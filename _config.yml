@@ -22,6 +22,9 @@ assets:
   gzip: []
 
 exclude:
+  - Dockerfile
+  - Makefile
+  - docker-compose.yml
   - Gemfile
   - Gemfile.lock
   - LICENSE
