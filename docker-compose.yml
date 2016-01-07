@@ -1,4 +1,4 @@
 frontend:
   build: .
   volumes:
-    - '/srv/pincent.net/dist:/pincent/_site'
+    - './site:/pincent/_site'
