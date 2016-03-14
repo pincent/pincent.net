@@ -32,10 +32,6 @@ exclude:
   - README.md
 
 product_categories:
-  cab:
-    - 醋酸丁酸纤维素(CAB)
-    - cab
-    - cellulose_acetate_butyrate.jpg
   dispersant:
     - 分散剂
     - dispersant
@@ -48,10 +44,6 @@ product_categories:
     - 玻璃粉
     - glass_powder
     - glass_powder.jpg
-  cellulose:
-    - 纤维素
-    - cellulose
-    - cellulose.jpg
   adhesion_promoter:
     - 附着力促进剂
     - adhesion_promoter
